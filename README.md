@@ -60,13 +60,7 @@ The system consists of:
 
 ## 🎥 Demo
 
-[Watch Demo Video](ADD_YOUR_VIDEO_LINK_HERE)
-
----
-
-## 📷 Setup
-
-![Setup](media/setup.jpg)
+[Watch Demo Video](https://drive.google.com/file/d/1wN-HqL7u_J5BtfhbBMFW_SnpxHUnpaQ0/view?usp=drive_link)
 
 ---
 
