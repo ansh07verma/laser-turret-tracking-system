@@ -16,7 +16,7 @@ The system continuously scans its surroundings and locks onto targets within a p
 
 - Real-time object detection using HC-SR04 ultrasonic sensor  
 - Pan-tilt tracking using dual servo motors (0°–180°)  
-- Automatic target locking within **20 cm range**  
+- Automatic target locking within **30 cm range**  
 - Laser activation on target detection  
 - OLED display for real-time feedback (distance / lock status)  
 - Continuous scanning with smooth servo motion  
@@ -27,7 +27,7 @@ The system continuously scans its surroundings and locks onto targets within a p
 ## 🧠 System Architecture
 
 ### 🧩 Block Diagram
-![Block Diagram](media/block_diagram.png)
+![Block Diagram](media/block_diagram.jpg)
 
 ### Components:
 - **Microcontroller:** TM4C123GXL (control unit)  
@@ -42,7 +42,7 @@ The system continuously scans its surroundings and locks onto targets within a p
 
 1. Ultrasonic sensor continuously measures object distance  
 2. Distance data is processed and filtered using moving average  
-3. If distance ≤ 20 cm:
+3. If distance ≤ 30 cm:
    - Servo movement stops  
    - Laser is activated  
    - OLED displays **"TARGET LOCKED"**  
