@@ -39,7 +39,7 @@ The system consists of:
 
 1. Ultrasonic sensor measures object distance  
 2. Distance is processed by TM4C123GXL  
-3. If distance ≤ 20 cm:
+3. If distance ≤ 30 cm:
    - Servo movement stops  
    - Laser is activated  
    - OLED displays **"TARGET LOCKED"**  
