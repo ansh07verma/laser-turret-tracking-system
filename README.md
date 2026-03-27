@@ -1,14 +1,14 @@
 # Real-Time Target Tracking Laser Turret
 
-Embedded system for real-time target detection and tracking using TM4C123GXL microcontroller.
+> Real-time embedded system integrating sensing, control, and actuation using TM4C123GXL.
 
 ---
 
 ## 📌 Overview
 
-This project implements an autonomous laser turret that detects and tracks objects using an ultrasonic sensor. The system performs continuous scanning and locks onto targets within a defined threshold distance.
+This project implements an autonomous laser turret capable of detecting and tracking objects in real time using an ultrasonic sensor.
 
-The design integrates sensing, actuation, and display modules to simulate a real-time embedded tracking system for surveillance and robotics applications.
+The system continuously scans its surroundings and locks onto targets within a predefined threshold distance. It integrates sensing, actuation, and display modules to simulate an intelligent embedded tracking system for robotics and surveillance applications.
 
 ---
 
@@ -19,31 +19,34 @@ The design integrates sensing, actuation, and display modules to simulate a real
 - Automatic target locking within **20 cm range**  
 - Laser activation on target detection  
 - OLED display for real-time feedback (distance / lock status)  
-- Continuous scanning with smooth servo control  
+- Continuous scanning with smooth servo motion  
+- Noise-reduced distance measurement using moving average filtering  
 
 ---
 
 ## 🧠 System Architecture
 
-The system consists of:
+### 🧩 Block Diagram
+![Block Diagram](media/block_diagram.png)
 
-- **Microcontroller**: TM4C123GXL (control unit)  
-- **Sensor**: Ultrasonic sensor (distance measurement)  
-- **Actuators**: Servo motors (pan & tilt motion)  
-- **Output**: Laser module (target indication)  
-- **Display**: OLED (I²C communication)  
+### Components:
+- **Microcontroller:** TM4C123GXL (control unit)  
+- **Sensor:** Ultrasonic sensor (distance measurement)  
+- **Actuators:** Servo motors (pan & tilt motion)  
+- **Output:** Laser module (target indication)  
+- **Display:** OLED (I²C communication)  
 
 ---
 
 ## 🔄 Working
 
-1. Ultrasonic sensor measures object distance  
-2. Distance is processed by TM4C123GXL  
-3. If distance ≤ 30 cm:
+1. Ultrasonic sensor continuously measures object distance  
+2. Distance data is processed and filtered using moving average  
+3. If distance ≤ 20 cm:
    - Servo movement stops  
    - Laser is activated  
    - OLED displays **"TARGET LOCKED"**  
-4. Otherwise:
+4. If no object is detected:
    - System continues scanning  
    - Distance is displayed on OLED  
 
@@ -53,7 +56,7 @@ The system consists of:
 
 - Distance measurement accuracy: **±1 cm**  
 - Servo motion range: **0°–180°**  
-- Stable real-time tracking achieved  
+- Real-time response achieved with stable tracking  
 - Reliable target locking within threshold range  
 
 ---
@@ -66,7 +69,7 @@ The system consists of:
 
 ## 📄 Documentation
 
-[Detailed Project Report](docs/project_report.pdf)
+- [Detailed Project Report](docs/project_report.pdf)
 
 ---
 
@@ -77,7 +80,7 @@ The system consists of:
 - MG995 Servo Motors (x2)  
 - Laser Module  
 - SSD1306 OLED Display (I²C)  
-- Breadboard, resistors, wiring  
+- Breadboard, resistors, jumper wires  
 
 ---
 
@@ -89,22 +92,39 @@ The system consists of:
 
 ---
 
+## ⚙️ Implementation Details
+
+- Custom I²C communication using bit-banging  
+- PWM-based servo control using timed pulses  
+- Moving average filter for stable distance measurement  
+- Real-time control loop with periodic updates  
+- Threshold-based decision system for target locking  
+
+---
+
 ## 📌 Applications
 
 - Surveillance and security systems  
 - Robotics and automation  
 - Target tracking systems  
+- Industrial positioning systems  
 
 ---
 
 ## 🔮 Future Work
 
 - Camera-based tracking using OpenCV  
-- AI-based object recognition  
-- Wireless control (Wi-Fi/Bluetooth)  
+- Machine learning-based object detection  
+- Wireless control (Wi-Fi / Bluetooth)  
+- Autonomous calibration and tracking optimization  
 
 ---
 
 ## 👤 Author
 
-Ansh Verma  
+**Ansh Verma**  
+ECE Student — VLSI, Communication & Embedded Systems  
+
+- 📧 07anshverma@gmail.com  
+- 🔗 https://www.linkedin.com/in/ansh07verma  
+- 💻 https://github.com/ansh07verma
