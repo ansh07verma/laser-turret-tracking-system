@@ -66,7 +66,7 @@ The system consists of:
 
 ## 📄 Documentation
 
-- [Detailed Project Report](docs/project_report.pdf)
+[Detailed Project Report](docs/project_report.pdf)
 
 ---
 
