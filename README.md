@@ -69,7 +69,7 @@ The system continuously scans its surroundings and locks onto targets within a p
 
 ## 📄 Documentation
 
-- [Detailed Project Report](docs/project_report.pdf)
+[Detailed Project Report](docs/project_report.pdf)
 
 ---
 
